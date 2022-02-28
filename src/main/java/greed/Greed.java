@@ -22,8 +22,8 @@ public class Greed {
 
         if(containsStraight(diceRoll)) result += 1200;
         if(containsThreePairs(diceRoll)) result += 800;
-        if(numberOfOccurences(diceRoll,1)==1) result+=100;
-        if(numberOfOccurences(diceRoll,5)==1) result+=50;
+        if(numberOfOccurences(diceRoll,1)<3) result+=100;
+        if(numberOfOccurences(diceRoll,5)<3) result+=50;
 
         for(int i=0; i<diceRoll.size();i++){
             if(numberOfOccurences(diceRoll,i)==3) result+= triple_scores[i];
@@ -35,7 +35,7 @@ public class Greed {
         player.setScore(result);
     }
 
-   
+
     public int numberOfOccurences(ArrayList<Integer> diceRoll, int instance) {
         int occurences = 0;
         for (Integer integer : diceRoll) {

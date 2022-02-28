@@ -8,7 +8,7 @@ public class App {
 
         ArrayList<Integer> diceRoll = new ArrayList<>();
 
-        diceRoll.add(1);
+        diceRoll.add(5);
         diceRoll.add(5);
         diceRoll.add(5);
         diceRoll.add(5);
