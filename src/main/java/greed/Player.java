@@ -7,6 +7,9 @@ public class Player {
     ArrayList<Integer> diceRoll;
 
 
+    /**
+     * @param diceRoll : array of dice Rolls
+     */
     public Player(ArrayList<Integer> diceRoll ){
         this.diceRoll = diceRoll;
         score = 0;
@@ -15,15 +18,12 @@ public class Player {
     public ArrayList<Integer> getDiceRoll() {
         return diceRoll;
     }
-
     public void setDiceRoll(ArrayList<Integer> diceRoll) {
         this.diceRoll = diceRoll;
     }
-
     public int getScore() {
         return score;
     }
-
     public void setScore(int score) {
         this.score = score;
     }

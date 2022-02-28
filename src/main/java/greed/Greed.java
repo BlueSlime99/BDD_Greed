@@ -12,6 +12,9 @@ public class Greed {
     }
 
 
+    /**
+     * method that returns the score of the diceRolls made the player
+     */
     public void play(){
         int[] triple_scores = {0, 1000, 200, 300, 400, 500, 600};
         ArrayList<Integer> diceRoll = player.getDiceRoll();
@@ -35,7 +38,9 @@ public class Greed {
     }
 
 
-
+    /**
+     * @return number of occurences of @param instance in @param diceRoll
+     */
     public int numberOfOccurences(ArrayList<Integer> diceRoll, int instance) {
         int occurences = 0;
         for (Integer integer : diceRoll) {
@@ -44,11 +49,20 @@ public class Greed {
         return occurences;
     }
 
+    /**
+     * @return a boolean : if our arrayList diceRoll elements are all distinct
+     * using hashSet and checking if the hashSet size is equal to the diceRoll arrayList size
+     */
     public boolean containsStraight(ArrayList<Integer> diceRoll){
         HashSet<Integer> straight = new HashSet<>(diceRoll);
         return straight.size() == 6;
     }
 
+    /**
+     * @return a boolean : if our arrayList diceRoll contains three pairs
+     * using a hashSet and checking if it's size is equal to Three
+     * and checking if the occurences of all the hashSet distinct elements are all 2 in the diceRoll arrayList
+     */
     public boolean containsThreePairs(ArrayList<Integer> diceRoll){
         HashSet<Integer> threePairs = new HashSet<>(diceRoll);
         int nbPairs = 0;
