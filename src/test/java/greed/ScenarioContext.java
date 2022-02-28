@@ -7,6 +7,6 @@ public class ScenarioContext {
     Player player;
 
     public ScenarioContext() {
-        this.player = new Player(new ArrayList<Integer>());;
+        this.player = new Player(new ArrayList<>());
     }
 }

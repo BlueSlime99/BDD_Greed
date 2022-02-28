@@ -1,5 +1,6 @@
 package greed;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,21 +20,21 @@ public class GreedSteps {
         context.greed = new Greed(context.player);
     }
 
-    @When("player has rolled dice")
-    public void playerHasRolledDice(List<Integer> list) {
-        ArrayList<Integer> dice = new ArrayList<Integer>(list);
+    @When("player rolls the dice {int} times")
+    public boolean playerHasRolledDice(int listSize) {
+       return context.player.diceRoll.size() == listSize;
+    }
+
+    @And("gets these dice rolls")
+    public void getsTheseDiceRolls(List<Integer> list) {
+        ArrayList<Integer> dice = new ArrayList<>(list);
         context.player.setDiceRoll(dice);
         context.greed.play();
         System.out.println(context.player.getScore());
-
     }
 
     @Then("player's score should be {int}")
     public void playerScoreShouldBe(int score) {
         assertEquals(score, context.player.getScore());
-
     }
-
-
-
 }

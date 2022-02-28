@@ -1,24 +1,30 @@
-Feature: TripleScore
-  Let see when will we have the Triple Scores on our score
-
-
+Feature: getting a TripleScore of any number of my dice faces (between 1 and 6) increases the score
+    #Getting a triple of a number scores points to the player depending on the number
+    #If it is a 1 then getting a triple score of ones [1,1,1] increases the score by 1000
+    #If it is a 2 then getting a triple score of twos [2,2,2] increases the score by 200
+    #If it is a 3 then getting a triple score of threes [3,3,3] increases the score by 300
+    #If it is a 4 then getting a triple score of fours [4,4,4] increases the score by 400
+    #If it is a 5 then getting a triple score of fives [5,5,5] increases the score by 500
+    #If it is a 6 then getting a triple score of sixes [6,6,6] increases the score by 600
 
   Scenario: Player has roll the dice and has at least a triple of 1
     Given  dice with player
-    When player has rolled dice
+    When player rolls the dice 6 times
+    And gets these dice rolls
       | 1 |
       | 1 |
       | 1 |
       | 2 |
       | 2 |
       | 3 |
-    Then player's score should be 1100
+    Then player's score should be 1000
 
 
 
   Scenario: Player has roll the dice and has at least a triple of 2
     Given  dice with player
-    When player has rolled dice
+    When player rolls the dice 6 times
+    And gets these dice rolls
       | 4 |
       | 2 |
       | 2 |
@@ -29,7 +35,8 @@ Feature: TripleScore
 
   Scenario: Player has roll the dice and has at least a triple of 3
     Given  dice with player
-    When player has rolled dice
+    When player rolls the dice 6 times
+    And gets these dice rolls
       | 4 |
       | 6 |
       | 3 |
@@ -41,7 +48,8 @@ Feature: TripleScore
 
   Scenario: Player has roll the dice and has at least a triple of 4
     Given  dice with player
-    When player has rolled dice
+    When player rolls the dice 6 times
+    And gets these dice rolls
       | 4 |
       | 2 |
       | 4 |
@@ -53,19 +61,21 @@ Feature: TripleScore
 
   Scenario: Player has roll the dice and has at least a triple of 5
     Given  dice with player
-    When player has rolled dice
+    When player rolls the dice 6 times
+    And gets these dice rolls
       | 4 |
       | 5 |
       | 5 |
       | 5 |
       | 3 |
       | 3 |
-    Then player's score should be 550
+    Then player's score should be 500
 
 
   Scenario: Player has roll the dice and has at least a triple of 6
     Given  dice with player
-    When player has rolled dice
+    When player rolls the dice 6 times
+    And gets these dice rolls
       | 4 |
       | 6 |
       | 6 |

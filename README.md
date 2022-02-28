@@ -2,12 +2,9 @@
 
 Greed
 
-http://en.wikipedia.org/wiki/Greed_%28dice_game%29
-
 Greed (Dice Game)
 
 Write a class Greed with a score() method that accepts an array of die values (up to 6). Scoring rules are as follows:
-
 A single one (100)
 A single five (50)
 Triple ones [1,1,1] (1000)
