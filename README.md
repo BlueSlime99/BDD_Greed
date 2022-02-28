@@ -34,9 +34,9 @@ Points scored are defined like this :
 
 ```java
 
-#arrayList of dice rolls : size of 6 
+// arrayList of dice rolls : size of 6 
 ArrayList<Integer> diceRoll = new ArrayList<>();
-        # add numbers to diceRoll : corresponding to the numbers got while throwing a dice
+        // add numbers to diceRoll : corresponding to the numbers got while throwing a dice
         diceRoll.add(1); 
         diceRoll.add(1);
         diceRoll.add(1);
@@ -44,11 +44,13 @@ ArrayList<Integer> diceRoll = new ArrayList<>();
         diceRoll.add(2);
         diceRoll.add(3);
 
-        #init a new Player with the arrayList of diceRolls above 
+        // init a new Player with the arrayList of diceRolls above 
         Player player = new Player(diceRoll);
-        # set a new greed class instance with the player
+        // set a new greed class instance with the player
         Greed greed = new Greed(player);
-        # greed play method returns the score made by the player calculated with the rules above
+        // greed play method returns the score made by the player calculated with the rules above
         greed.play();
 
 ```
+
+## Project includes features written with guerkin for sceanarios tests 
