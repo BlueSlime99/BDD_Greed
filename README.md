@@ -1,25 +1,22 @@
-# BDD_Greed
+#Greed (Dice Game)
 
-Greed
+Greed class takes an arrayList of dice Rolls (6 dice rolls) and returns the result scored by the player
 
-Greed (Dice Game)
+Points scored are defined like this :
 
-###Write a class Greed with a score() method that accepts an array of die values (up to 6). Scoring rules are as follows:
-            - A single one (100)
-            - A single five (50)
-            - Triple ones [1,1,1] (1000)
-            - Triple twos [2,2,2] (200)
-            - Triple threes [3,3,3] (300)
-            - Triple fours [4,4,4] (400)
-            - Triple fives [5,5,5] (500)
-            - Triple sixes [6,6,6] (600)
+    - getting a single one increases the result by (100)
+    - getting a single five increases the result by (50)
+    - getting triple ones [1,1,1] increases the result by (1000)
+    - getting triple twos [2,2,2] increases the result by (200)
+    - getting triple threes [3,3,3] increases the result by (300)
+    - getting triple fours [4,4,4] increases the result by (400)
+    - getting triple fives [5,5,5] increases the result by (500)
+    - getting triple sixes [6,6,6] increases the result by (600)
 
-Note that the scorer should work for any number of dice up to 6.
+    - getting four-of-a-kind multiplies Triple Score by 2
+    - getting five-of-a-kind multiplies Triple Score by 4
+    - getting six-of-a-kind multiplies Triple Score by 8
 
-Four-of-a-kind (Multiply Triple Score by 2)
-Five-of-a-kind (Multiply Triple Score by 4)
-Six-of-a-kind (Multiply Triple Score by 8)
+     - getting Three Pairs [2,2,3,3,4,4] increases the result by (800)
 
-Three Pairs [2,2,3,3,4,4] (800)
-
-Straight [1,2,3,4,5,6] (1200)
+     - getting a Straight [1,2,3,4,5,6] increases the result by (1200)
