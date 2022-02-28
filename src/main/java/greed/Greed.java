@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 public class Greed {
 
-    Player player;
+    final Player player;
 
     public Greed(Player player) {
         this.player = player;
@@ -33,6 +33,7 @@ public class Greed {
         }
         player.setScore(result);
     }
+
 
 
     public int numberOfOccurences(ArrayList<Integer> diceRoll, int instance) {

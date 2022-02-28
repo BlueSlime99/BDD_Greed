@@ -22,6 +22,7 @@ Feature: MultiScore : Getting four, five or six of a kind in my total dice rolls
       | 3 |
     Then player's score should be 2000
 
+
   Scenario: Player has roll the dice and has at least four of a kind (1 to 6) with triple four
     Given  dice with player
     When player rolls the dice 6 times
@@ -45,6 +46,7 @@ Feature: MultiScore : Getting four, five or six of a kind in my total dice rolls
       | 4 |
       | 3 |
     Then player's score should be 1600
+
 
   Scenario: Player has roll the dice and has at least a six of a kind (1 to 6)
     Given  dice with player

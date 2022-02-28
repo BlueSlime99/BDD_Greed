@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ScenarioContext {
     Greed greed;
-    Player player;
+    final Player player;
 
     public ScenarioContext() {
         this.player = new Player(new ArrayList<>());

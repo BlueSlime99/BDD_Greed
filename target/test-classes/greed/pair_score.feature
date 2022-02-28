@@ -68,7 +68,7 @@ Scenario: Player has roll the dice and gets three pairs
       | 3 |
     Then player's score should be 800
 
-Scenario: Player has roll the dice and gets three pairs whith one pair of ones
+Scenario: Player has roll the dice and gets three pairs with one pair of ones
     Given  dice with player
     When player rolls the dice 6 times
     And gets these dice rolls

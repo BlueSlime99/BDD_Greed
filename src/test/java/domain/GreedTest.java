@@ -11,8 +11,8 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 
 public class GreedTest {
-    Player player = new Player(new ArrayList<>());
-    Greed greed = new Greed(player);
+    final Player player = new Player(new ArrayList<>());
+    final Greed greed = new Greed(player);
 
     @Test
     public void tripleOne() {assertEqual(1000, new ArrayList<>(Arrays.asList(1, 1, 1, 2, 3,4)));}

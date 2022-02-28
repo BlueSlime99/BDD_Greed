@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class GreedSteps {
 
-    ScenarioContext context = new ScenarioContext();
+    public final ScenarioContext context = new ScenarioContext();
 
 
     @Given("dice with player")
