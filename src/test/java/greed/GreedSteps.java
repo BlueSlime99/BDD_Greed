@@ -29,7 +29,7 @@ public class GreedSteps {
     }
 
     @Then("player's score should be {int}")
-    public void playerSScoreShouldBe(int score) {
+    public void playerScoreShouldBe(int score) {
         assertEquals(score, context.player.getScore());
 
     }

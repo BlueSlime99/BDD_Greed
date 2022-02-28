@@ -8,12 +8,13 @@ public class App {
 
         ArrayList<Integer> diceRoll = new ArrayList<>();
 
-        diceRoll.add(6);
-        diceRoll.add(6);
-        diceRoll.add(6);
-        diceRoll.add(6);
-        diceRoll.add(6);
-        diceRoll.add(6);
+        diceRoll.add(1);
+        diceRoll.add(5);
+        diceRoll.add(5);
+        diceRoll.add(5);
+        diceRoll.add(5);
+        diceRoll.add(5);
+
         Player player = new Player(diceRoll);
         Greed greed = new Greed(player);
         greed.play();

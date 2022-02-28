@@ -13,7 +13,6 @@ Feature: MultiScore
     Then player's score should be 4200
 
 
-
   Scenario: Player has roll the dice and has at least four of a kind (1 to 6) with triple four
     Given  dice with player
     When player has rolled dice

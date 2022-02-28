@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="greed" />
+        <module name="BDD_Greed" />
       </profile>
     </annotationProcessing>
   </component>

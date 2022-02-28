@@ -13,60 +13,35 @@ public class Greed {
 
 
     public void play(){
-        int [] occurences = new int [7];
+        int[] triple_scores = {0, 1000, 200, 300, 400, 500, 600};
         ArrayList<Integer> diceRoll = player.getDiceRoll();
+        int result = 0;
+
 
         if(diceRoll.size()>6) throw new IllegalArgumentException("too many dice rolls : please limit to 6");
 
-        int result = 0;
         if(containsStraight(diceRoll)) result += 1200;
-        if (diceRoll.contains(1)) result += 100;
-        if (diceRoll.contains(5)) result += 50;
         if(containsThreePairs(diceRoll)) result += 800;
+        if(numberOfOccurences(diceRoll,1)==1) result+=100;
+        if(numberOfOccurences(diceRoll,5)==1) result+=50;
 
-        for (int i=0;i<diceRoll.size();i++) {
-            calculatOccurences(diceRoll.get(i), occurences);
-            int integer = diceRoll.get(i);
-            int numberofOccurences = getOccurence(occurences, integer);
-            if(diceRoll.get(i)>6) throw new IllegalArgumentException("argument out of bonds : dice rolls takes only numbers between 1 and 6 ");
-            if (numberofOccurences >= 3 && integer == 1) result += 1000;
-            if (numberofOccurences == 3 && integer != 1 ) result += 100 * integer;
-            result = check_multiple_kind(numberofOccurences, result);
-
+        for(int i=0; i<diceRoll.size();i++){
+            if(numberOfOccurences(diceRoll,i)==3) result+= triple_scores[i];
+            if(numberOfOccurences(diceRoll,i)==4) result+= triple_scores[i]*2;
+            if(numberOfOccurences(diceRoll,i)==5) result+= triple_scores[i]*4;
+            if(numberOfOccurences(diceRoll,i)==6) result+= triple_scores[i]*8;
         }
+
         player.setScore(result);
     }
 
-
-    public int check_multiple_kind(int numberofOccurences, int result){
-            int resultUpdate = result;
-            if(numberofOccurences==4) resultUpdate *=2;
-            if(numberofOccurences==5) resultUpdate *=4;
-            if(numberofOccurences==6) resultUpdate *=8;
-
-            return resultUpdate;
-    }
-
-
-
-
+   
     public int numberOfOccurences(ArrayList<Integer> diceRoll, int instance) {
         int occurences = 0;
         for (Integer integer : diceRoll) {
             if (integer == instance) occurences++;
         }
         return occurences;
-    }
-
-    public int [] calculatOccurences(int diceRoll, int [] updateOccurences) {
-
-        updateOccurences[diceRoll]++;
-        return updateOccurences;
-    }
-
-    public int getOccurence(int [] occurences, int instance){
-
-        return occurences[instance];
     }
 
     public boolean containsStraight(ArrayList<Integer> diceRoll){
@@ -83,4 +58,6 @@ public class Greed {
         }
      return nbPairs == 3;
  }
+
+
 }
