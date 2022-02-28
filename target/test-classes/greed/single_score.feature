@@ -16,8 +16,6 @@ Feature: Getting a single one or a single five in our 6 dice rolls increases the
       | 3 |
     Then player's score should be 100
 
-
-
   Scenario: Player rolled the dice 6 times and gets a single five in his 6 rolls and no ones
     Given  dice with player
     When player rolls the dice 6 times
