@@ -5,6 +5,4 @@ import org.junit.runner.RunWith;
 
 @SuppressWarnings("ALL")
 @RunWith(Cucumber.class)
-public class RunFeature {
-
-}
+public class RunFeature { }

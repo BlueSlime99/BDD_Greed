@@ -8,6 +8,8 @@ Feature: getting a Pair score of any number of my dice faces (between 1 and 6)
   #Getting a double pair score (not of ones and fives) should not increase our score
   #Getting three pairs score  should increase my score by 800
 
+#  Rule : Getting a pair of ones counts only a single one and increases score by 100
+
   Scenario: Player has roll the dice and has a ones pair
     Given  dice with player
     When player rolls the dice 6 times
@@ -19,6 +21,8 @@ Feature: getting a Pair score of any number of my dice faces (between 1 and 6)
       | 6 |
       | 3 |
     Then player's score should be 100
+
+    #  Rule : Getting a pair of fives counts only a single five and increases score by 50
 
   Scenario: Player has roll the dice and has a fives pair
     Given  dice with player

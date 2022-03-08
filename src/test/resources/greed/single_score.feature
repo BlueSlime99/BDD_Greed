@@ -4,6 +4,8 @@ Feature: Getting a single one or a single five in our 6 dice rolls increases the
   # Getting a single five in 6 dice rolls and no ones should increase our score by 50.
   # Getting a two, three, four, or six should not increase out score.
 
+#  Rule : Getting a single one increases score by 100
+
   Scenario: Player rolled the dice 6 times and gets a single one in his 6 rolls and no fives
     Given  dice with player
     When player rolls the dice 6 times
@@ -16,7 +18,7 @@ Feature: Getting a single one or a single five in our 6 dice rolls increases the
       | 3 |
     Then player's score should be 100
 
-
+# Rule : Getting a single five increases score by 50
 
   Scenario: Player rolled the dice 6 times and gets a single five in his 6 rolls and no ones
     Given  dice with player
@@ -29,6 +31,8 @@ Feature: Getting a single one or a single five in our 6 dice rolls increases the
       | 3 |
       | 3 |
     Then player's score should be 50
+
+#    Rule : Getting a single five and a single one increases score by 150
 
 Scenario: Player rolled the dice 6 times and gets a single one and a single five in his 6 rolls and no ones
     Given  dice with player

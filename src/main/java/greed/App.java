@@ -7,10 +7,9 @@ public class App {
     public static void main(String[] args) {
 
         ArrayList<Integer> diceRoll = new ArrayList<>();
-
         diceRoll.add(1);
-        diceRoll.add(1);
-        diceRoll.add(1);
+        diceRoll.add(2);
+        diceRoll.add(2);
         diceRoll.add(1);
         diceRoll.add(2);
         diceRoll.add(3);
